@@ -32,7 +32,7 @@ class CASRequest
     # *up to* 32 characters in length (including ST-), and recommendes
     # that services accept tickets up to 256 characters long.
     # http://www.jasig.org/cas/protocol
-    !!(@request.get? && ticket_param && ticket_param.to_s =~ /\AST\-[^\s]{1,353}\Z/)
+    !!(@request.get? && ticket_param && ticket_param.to_s =~ /\AST\-[^\s]{1,453}\Z/)
   end
 
   def path_matches?(strings_or_regexps)
